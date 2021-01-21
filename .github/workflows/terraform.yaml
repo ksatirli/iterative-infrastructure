@@ -15,6 +15,9 @@ jobs:
     strategy:
       matrix:
         directory: ["./terraform/azure", "./terraform/azure-compute", "./terraform/github"]
+    defaults:
+      run:
+        working-directory: ${{ matrix.directory }}
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
@@ -29,21 +32,15 @@ jobs:
       - name: Run `terraform fmt`
         id: fmt
         run: terraform fmt -diff -check -no-color -recursive
-        with:
-          working-directory: ${{ matrix.directory }}
-
 
       - name: Run `terraform init`
         id: init
         run: terraform init
-        with:
-          working-directory: ${{ matrix.directory }}
 
       - name: Run `terraform validate`
         id: validate
         if: github.event_name == 'pull_request'
         run: terraform validate -no-color
-        with:
           working-directory: ${{ matrix.directory }}
 
       - name: Terraform Plan
@@ -51,7 +48,6 @@ jobs:
         if: github.event_name == 'pull_request'
         run: terraform plan -no-color
         continue-on-error: true
-        with:
           working-directory: ${{ matrix.directory }}
 
       - name: Update Pull Request
@@ -78,17 +74,14 @@ jobs:
               repo: context.repo.repo,
               body: output
             })
-          with:
-            working-directory: ${{ matrix.directory }}
+          working-directory: ${{ matrix.directory }}
 
       - name: Terraform Plan Status
         if: steps.plan.outcome == 'failure'
         run: exit 1
-        with:
           working-directory: ${{ matrix.directory }}
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: terraform apply -auto-approve
-        with:
           working-directory: ${{ matrix.directory }}
