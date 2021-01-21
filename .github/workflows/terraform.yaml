@@ -41,7 +41,6 @@ jobs:
         id: validate
         if: github.event_name == 'pull_request'
         run: terraform validate -no-color
-          working-directory: ${{ matrix.directory }}
 
       - name: Terraform Plan
         id: plan
