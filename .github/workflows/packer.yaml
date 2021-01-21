@@ -2,6 +2,9 @@
 name: "Code Quality: Packer"
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
 
 jobs:
@@ -11,6 +14,10 @@ jobs:
     defaults:
       run:
         working-directory: "./packer"
+    env:
+      PKR_VAR_CLIENT_ID: ${{ secrets.PKR_VAR_CLIENT_ID }}
+      PKR_VAR_CLIENT_SECRET: ${{ secrets.PKR_VAR_CLIENT_SECRET }}
+      PKR_VAR_TENANT_ID: ${{ secrets.PKR_VAR_TENANT_ID }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -21,7 +28,9 @@ jobs:
           packer-version: 1.6.6
 
       - name: Verify the Packer build files
+        if: github.event_name == 'pull_request'
         run: packer validate .
 
       - name: Build Packer image
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: packer build .
