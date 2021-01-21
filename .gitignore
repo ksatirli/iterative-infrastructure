@@ -1,0 +1,11 @@
+### generic ###
+*.log
+
+## Packer ###
+packer/variables.pkrvars.hcl
+packer/packer_cache/
+
+### Terraform ###
+**/.terraform/*
+*.tfstate
+*.tfstate.*
