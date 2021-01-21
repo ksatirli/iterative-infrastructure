@@ -1,4 +1,4 @@
-source "azure-arm" "server" {
+source "azure-arm" "main" {
   # the following configuration represents a minimally viable selection
   # for more options see: https://www.packer.io/docs/builders/azure/arm
 
@@ -29,7 +29,7 @@ source "azure-arm" "server" {
 
 build {
   sources = [
-    "source.azure-arm.server"
+    "source.azure-arm.main"
   ]
 
   provisioner "shell" {
