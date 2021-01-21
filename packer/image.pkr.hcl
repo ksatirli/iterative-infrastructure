@@ -13,18 +13,18 @@ source "azure-arm" "server" {
   #client_secret   = "${var.client_secret}"
 
   # base image
-  image_publisher = "${var.image_publisher}"
-  image_offer     = "${var.image_offer}"
-  image_sku       = "${var.image_sku}"
+  image_publisher = var.image_publisher
+  image_offer     = var.image_offer
+  image_sku       = var.image_sku
 
   # capture machine configuration
-  location = "${var.location}"
-  vm_size  = "${var.vm_size}"
-  os_type  = "${var.os_type}"
+  location = var.location
+  vm_size  = var.vm_size
+  os_type  = var.os_type
 
   # artifact configuration
-  managed_image_resource_group_name = "${var.managed_image_resource_group_name}"
-  managed_image_name                = "${var.managed_image_name}"
+  managed_image_resource_group_name = var.managed_image_resource_group_name
+  managed_image_name                = var.managed_image_name
 }
 
 build {
