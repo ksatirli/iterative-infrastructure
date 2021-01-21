@@ -13,6 +13,7 @@ jobs:
     name: Terraform
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false # We will want all pipelines to run without one failing the others (this is okay!)
       matrix:
         directory: ["./terraform/azure", "./terraform/azure-compute", "./terraform/github"]
     defaults:
