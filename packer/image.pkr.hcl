@@ -3,14 +3,14 @@ source "azure-arm" "main" {
   # for more options see: https://www.packer.io/docs/builders/azure/arm
 
   # authentication with `az` CLI supplied credentials
-  use_azure_cli_auth = true
+  # use_azure_cli_auth = true
 
   # authentication with explicitly defined credentials
   # NOTE: to use this section, disable the `use_azure_cli_auth` property and
   # NOTE: enable the `subscription_id`, `client_id`, and `client_secret` properties
-  #subscription_id = "${var.subscription_id}"
-  #client_id       = "${var.client_id}"
-  #client_secret   = "${var.client_secret}"
+  subscription_id = var.subscription_id
+  client_id       = var.client_id
+  client_secret   = var.client_secret
 
   # base image
   image_publisher = var.image_publisher
