@@ -1,0 +1,24 @@
+---
+name: "Code Quality: Packer"
+
+on:
+  pull_request:
+
+jobs:
+  packer:
+    name: Packer
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Use latest Packer
+        uses: hashicorp-contrib/setup-packer@v1
+        with:
+          packer-version: 1.6.6
+
+      - name: Verify the Packer build files
+        run: packer verify .
+
+      - name: Build Packer image
+        run: packer build .
