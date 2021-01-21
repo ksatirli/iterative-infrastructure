@@ -1,10 +1,13 @@
 # Utilize the previously generated Terraform State file to retrieve some values
 # see https://www.terraform.io/docs/providers/terraform/d/remote_state.html
 data "terraform_remote_state" "upstream" {
-  backend = "local"
+  backend = "remote"
 
   config = {
-    path = "../azure/terraform.tfstate"
+    organization = "a-demo-organization"
+    workspaces = {
+      name = "iterative-infrastructure-azure"
+    }
   }
 }
 

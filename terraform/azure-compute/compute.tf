@@ -18,7 +18,7 @@ resource "azurerm_linux_virtual_machine" "main" {
 
   admin_ssh_key {
     username   = "adminuser"
-    public_key = file("~/.ssh/id_rsa.pub")
+    public_key = tls_private_key.azure.public_key_openssh
   }
 
   source_image_id = data.azurerm_image.packer.id
