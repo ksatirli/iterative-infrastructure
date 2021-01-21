@@ -15,6 +15,7 @@ jobs:
       run:
         working-directory: "./packer"
     env:
+      PKR_VAR_subscription_id: ${{ secrets.PKR_VAR_SUBSCRIPTION_ID }}
       PKR_VAR_client_id: ${{ secrets.PKR_VAR_CLIENT_ID }}
       PKR_VAR_client_secret: ${{ secrets.PKR_VAR_CLIENT_SECRET }}
       PKR_VAR_tenant_id: ${{ secrets.PKR_VAR_TENANT_ID }}
