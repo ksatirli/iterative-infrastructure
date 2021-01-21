@@ -47,7 +47,6 @@ jobs:
         if: github.event_name == 'pull_request'
         run: terraform plan -no-color
         continue-on-error: true
-          working-directory: ${{ matrix.directory }}
 
       - name: Update Pull Request
         uses: actions/github-script@0.9.0
@@ -73,14 +72,11 @@ jobs:
               repo: context.repo.repo,
               body: output
             })
-          working-directory: ${{ matrix.directory }}
 
       - name: Terraform Plan Status
         if: steps.plan.outcome == 'failure'
         run: exit 1
-          working-directory: ${{ matrix.directory }}
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: terraform apply -auto-approve
-          working-directory: ${{ matrix.directory }}
