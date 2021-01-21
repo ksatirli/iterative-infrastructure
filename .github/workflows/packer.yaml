@@ -18,7 +18,7 @@ jobs:
           packer-version: 1.6.6
 
       - name: Verify the Packer build files
-        run: packer verify .
+        run: packer validate .
 
       - name: Build Packer image
         run: packer build .
