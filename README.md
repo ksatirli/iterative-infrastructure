@@ -6,13 +6,32 @@
 
 - [Iterative Infrastructure](#iterative-infrastructure)
   - [Table of Contents](#table-of-contents)
+  - [Requirements](#requirements)
   - [Examples](#examples)
   - [Author Information](#author-information)
   - [License](#license)
 
+## Requirements
+
+To use the code in this repository, you will need the following applications:
+
+* [HashiCorp Terraform](https://www.terraform.io/downloads.html) `v.014.4` (or higher)
+* [HashiCorp Packer](https://www.packer.io/downloads) `1.6.6` (or higher)
+* Azure CLI [az](https://docs.microsoft.com/en-us/cli/azure/)
+
+Additionally, you will need a GitHub [Personal Access Token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token).
+
 ## Examples
 
-TODO
+The code in this repository is split out into a handful of distinct flows:
+
+* `terraform/azure` contains code for Terraform to set up an Azure Resource Group and generate a Packer variables definition file
+* `packer` contains code for Packer to build a (very!) basic image for an Azure Linux Virtual Machine
+* `terraform/azure-compute` contains code for Terraform to start a Linux Virtual Machine with the Packer image
+* `terraform/github` contains code for Terraform to set up a GitHub Organization's memberships and repository
+* `.github/workflows` contains GitHub Actions to ensure code quality for Packer and Terraform projects
+
+Each directory contains its own `README.md` with information relevant to the workflow.
 
 ## Author Information
 
