@@ -18,7 +18,7 @@ resource "azurerm_linux_virtual_machine" "main" {
 
   admin_ssh_key {
     username   = "adminuser"
-    public_key = tls_private_key.azure.public_key_openssh
+    public_key = file("~/.ssh/id_rsa.pub")
   }
 
   source_image_id = data.azurerm_image.packer.id
@@ -40,5 +40,5 @@ output "vm_public_ip" {
 
 output "ssh_connection_string" {
   value       = "ssh ${azurerm_linux_virtual_machine.main.admin_username}@${local.vm_public_ip}"
-  description = "SSH connection string "
+  description = "SSH connection string"
 }
