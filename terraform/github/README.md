@@ -1,4 +1,4 @@
-# Terraform Workflow `azure-compute`
+# Terraform Workflow `github`
 
 > This directory showcases a Terraform workflow that starts an Azure Linux VM using a self-created Packer image
 
