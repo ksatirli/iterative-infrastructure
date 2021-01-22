@@ -6,7 +6,7 @@
 
 Workflow that sets up Packer to run within GitHub Actions, and then will run the following static checks:
 
-- `packer format`
+- `packer fmt`
 - `packer validate`
 
 ## "Code Quality: Super-Linter" (`superlinter.yaml`)
