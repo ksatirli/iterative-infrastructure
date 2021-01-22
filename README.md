@@ -8,6 +8,7 @@
   - [Table of Contents](#table-of-contents)
   - [Requirements](#requirements)
   - [Workflows](#workflows)
+  - [Additional Reading](#additional-reading)
   - [Author Information](#author-information)
   - [License](#license)
 
@@ -32,6 +33,28 @@ The code in this repository is split out into a handful of distinct flows, each 
 * `.github/workflows` contains GitHub Actions to ensure code quality for Packer and Terraform projects
 
 Each directory contains its own `README.md` with information relevant to the workflow.
+
+## Additional Reading
+
+While the authors of this repository take care to explain all workflows with the amount of detail required to execute them, the information here should not be considered exhaustive.
+
+This section is a collection of links that will help you make the most of today's session.
+
+### Terraform
+
+* introduction to the Terraform Ecosystem: [speakerdeck.com/ksatirli/intro-to-the-terraform-ecosystem](https://speakerdeck.com/ksatirli/intro-to-the-terraform-ecosystem)
+* CLI commands [terraform.io/docs/commands/index.html](https://www.terraform.io/docs/commands/index.html)
+* variables and type constraints: [terraform.io/docs/configuration/variables.html](https://www.terraform.io/docs/configuration/variables.html#type-constraints)
+* variable definition files: [terraform.io/docs/configuration/variables.html](https://www.terraform.io/docs/configuration/variables.html#variable-definitions-tfvars-files)
+* information about Terraform State: [terraform.io/docs/state/index.html](https://www.terraform.io/docs/state/index.html)
+* in-depth guides on how to use Terraform: [learn.hashicorp.com/terraform](https://learn.hashicorp.com/terraform)
+* Terraform Code Quality: [speakerdeck.com/ksatirli/code-quality-for-terraform](https://speakerdeck.com/ksatirli/code-quality-for-terraform)
+
+
+To learn more about HashiCorp products, check out the HashiCorp Learn platform at [learn.hashicorp.com](https://learn.hashicorp.com). The platform hosts in-depth guides on how to use [Packer](https://learn.hashicorp.com/packer) and .
+
+
+
 
 ## Author Information
 
