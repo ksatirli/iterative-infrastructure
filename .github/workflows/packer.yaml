@@ -24,13 +24,13 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Format Packer files
-        uses: operatehappy/packer-github-actions@updates-to-packer-166
+        uses: operatehappy/packer-github-actions@master
         with:
           command: fmt
           target: packer/image.pkr.hcl
           
       - name: Validate Packer files
-        uses: operatehappy/packer-github-actions@updates-to-packer-166
+        uses: operatehappy/packer-github-actions@master
         with:
           command: validate
           arguments: -syntax-only
