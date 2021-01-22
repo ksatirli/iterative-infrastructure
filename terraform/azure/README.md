@@ -28,7 +28,7 @@ Next, inspect the resources that will be created by executing the [plan](https:/
 terraform plan
 ```
 
-If all of this looks good, provision the resources using the [apply][https://www.terraform.io/docs/commands/apply.html} command:
+If all of this looks good, provision the resources using the [apply](https://www.terraform.io/docs/commands/apply.html) command:
 
 ```sh
 terraform apply
