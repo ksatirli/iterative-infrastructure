@@ -4,20 +4,20 @@
 # and enable the variables for `subscription_id`, `client_id`, and `client_secret`
 # Next, move `variables.pkrvars.hcl.sample` to `variables.pkrvars.hcl` and populate it
 
-variable "subscription_id" {
-  type = string
-}
+#variable "subscription_id" {
+#  type = string
+#}
 
-variable "client_id" {
-  type = string
-}
+#variable "client_id" {
+#  type = string
+#}
 
-variable "client_secret" {
-  type = string
-
-  # sensitive values are hidden from outputs
-  sensitive = true
-}
+#variable "client_secret" {
+#  type = string
+#
+#  # sensitive values are hidden from outputs
+#  sensitive = true
+#}
 
 variable "image_publisher" {
   type        = string

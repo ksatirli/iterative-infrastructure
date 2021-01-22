@@ -14,11 +14,6 @@ jobs:
     defaults:
       run:
         working-directory: "./packer"
-    env:
-      PKR_VAR_subscription_id: ${{ secrets.PKR_VAR_SUBSCRIPTION_ID }}
-      PKR_VAR_client_id: ${{ secrets.PKR_VAR_CLIENT_ID }}
-      PKR_VAR_client_secret: ${{ secrets.PKR_VAR_CLIENT_SECRET }}
-      PKR_VAR_tenant_id: ${{ secrets.PKR_VAR_TENANT_ID }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -28,7 +23,7 @@ jobs:
         with:
           command: fmt
           target: packer/image.pkr.hcl
-          
+
       - name: Validate Packer files
         uses: operatehappy/packer-github-actions@master
         with:
