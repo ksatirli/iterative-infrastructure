@@ -24,13 +24,13 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Format Packer files
-        uses: operatehappy/packer-github-actions@master
+        uses: operatehappy/packer-github-actions@v0.3.0
         with:
           command: fmt
           target: .      
           
       - name: Validate Packer files
-        uses: operatehappy/packer-github-actions@master
+        uses: operatehappy/packer-github-actions@v0.3.0
         with:
           command: validate
           arguments: -syntax-only
