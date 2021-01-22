@@ -42,6 +42,6 @@ output "vm_public_ip" {
 }
 
 output "ssh_connection_string" {
-  value       = "ssh ${azure_linux_virtual_machine.main.admin_username}@${local.vm_public_ip}"
+  value       = "ssh ${azurerm_linux_virtual_machine.main.admin_username}@${local.vm_public_ip}"
   description = "SSH connection string"
 }
