@@ -27,11 +27,11 @@ jobs:
         uses: operatehappy/packer-github-actions@updates-to-packer-166
         with:
           command: fmt
-          target: image.pkr.hcl
+          target: packer/image.pkr.hcl
           
       - name: Validate Packer files
         uses: operatehappy/packer-github-actions@updates-to-packer-166
         with:
           command: validate
           arguments: -syntax-only
-          target: image.pkr.hcl
+          target: packer/image.pkr.hcl
