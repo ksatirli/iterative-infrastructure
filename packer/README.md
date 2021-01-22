@@ -12,7 +12,7 @@ Alternatively, you can manually create an Azure Resource Group as well as the `t
 
 ## Log in to Azure through `az`
 
-If you executed the `../terraform/azure` workflow succesfully, you can skip this step. If not, read on:
+If you executed the `../terraform/azure` workflow successfully, you can skip this step. If not, read on:
 
 For Packer to be able to build images in Azure, you will need to provide authentication credentials.
 
@@ -31,3 +31,5 @@ To build the Packer image, use the [build](https://www.packer.io/docs/commands/b
 This will execute the Packer build workflow.
 
 > ⚠️ If you get one or more errors about unset variables (`location`, `managed_image_resource_group_name` etc.), make sure to execute the Terraform workflow in `../terraform/azure`.
+
+Once the build workflow completes successfully, you will be able to inspect the image in the [Azure Portal](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Compute%2Fimages).
