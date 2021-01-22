@@ -4,6 +4,6 @@
 
 ## "Code Quality: Packer" (`packer.yaml`)
 
-## "Code Quality: Packer" (`superlinter.yaml`)
+## "Code Quality: Super-Linter" (`superlinter.yaml`)
 
 ## "Code Quality: Terraform" (`terraform.yaml`)
