@@ -15,9 +15,9 @@
 
 To use the code in this repository, you will need the following applications:
 
-* [HashiCorp Terraform](https://www.terraform.io/downloads.html) `0.14.4` (or higher)
-* [HashiCorp Packer](https://www.packer.io/downloads) `1.6.6` (or higher)
-* Azure CLI [az](https://docs.microsoft.com/en-us/cli/azure/) `2.0.0` (or higher)
+* [HashiCorp Terraform](https://www.terraform.io/downloads.html) `0.14.4` (or later)
+* [HashiCorp Packer](https://www.packer.io/downloads) `1.6.6` (or later)
+* Azure CLI [az](https://docs.microsoft.com/en-us/cli/azure/) `2.0.0` (or later)
 
 Additionally, you will need a GitHub [Personal Access Token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token).
 
