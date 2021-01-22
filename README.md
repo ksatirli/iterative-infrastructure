@@ -6,11 +6,17 @@
 
 - [Iterative Infrastructure](#iterative-infrastructure)
   - [Table of Contents](#table-of-contents)
+  - [Important Links](#important-links)
   - [Requirements](#requirements)
   - [Workflows](#workflows)
   - [Additional Reading](#additional-reading)
   - [Author Information](#author-information)
   - [License](#license)
+
+## Important Links
+
+Slides: [speakerdeck.com/ksatirli/iterative-infrastructure](speakerdeck.com/ksatirli/iterative-infrastructure)
+Code: [github.com/ksatirli/iterative-infrastructure](https://github.com/ksatirli/iterative-infrastructure)
 
 ## Requirements
 
@@ -50,11 +56,12 @@ This section is a collection of links that will help you make the most of today'
 * in-depth guides on how to use Terraform: [learn.hashicorp.com/terraform](https://learn.hashicorp.com/terraform)
 * Terraform Code Quality: [speakerdeck.com/ksatirli/code-quality-for-terraform](https://speakerdeck.com/ksatirli/code-quality-for-terraform)
 
+### Packer
 
-To learn more about HashiCorp products, check out the HashiCorp Learn platform at [learn.hashicorp.com](https://learn.hashicorp.com). The platform hosts in-depth guides on how to use [Packer](https://learn.hashicorp.com/packer) and .
-
-
-
+* CLI commands [packer.io/docs/commands](https://www.packer.io/docs/commands)
+* variables [packer.io/docs/templates/user-variables](https://www.packer.io/docs/templates/user-variables)
+* in-depth guides on how to use Packer: [learn.hashicorp.com/packer](https://learn.hashicorp.com/packer)
+* Packer GitHub Actions: [github.com/operatehappy/packer-github-actions](https://github.com/operatehappy/packer-github-actions)
 
 ## Author Information
 
