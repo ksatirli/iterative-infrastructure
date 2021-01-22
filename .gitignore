@@ -2,7 +2,7 @@
 *.log
 
 ## Packer ###
-packer/variables.pkrvars.hcl
+packer/terraform_data.auto.pkrvars.hcl
 packer/packer_cache/
 
 ### Terraform ###
