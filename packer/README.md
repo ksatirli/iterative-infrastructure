@@ -26,7 +26,9 @@ To log in, execute the `az login` command and follow the instructions presented 
 
 To build the Packer image, use the [build](https://www.packer.io/docs/commands/build) command:
 
-`packer build image.pkr.hcl`
+```sh
+packer build image.pkr.hcl
+```
 
 This will execute the Packer build workflow.
 
