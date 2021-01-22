@@ -1,0 +1,29 @@
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "2.43.0"
+    }
+
+    local = {
+      source  = "hashicorp/local"
+      version = "2.0.0"
+    }
+
+    random = {
+      source  = "hashicorp/random"
+      version = "3.0.1"
+    }
+  }
+}
+
+terraform {
+  backend "remote" {
+    hostname     = "app.terraform.io"
+    organization = "a-demo-organization"
+
+    workspaces {
+      name = "iterative-infrastructure-azure"
+    }
+  }
+}
