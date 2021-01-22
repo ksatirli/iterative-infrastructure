@@ -15,7 +15,7 @@
 
 ## Important Links
 
-Slides: [speakerdeck.com/ksatirli/iterative-infrastructure](speakerdeck.com/ksatirli/iterative-infrastructure)
+Slides: [speakerdeck.com/ksatirli/iterative-infrastructure](https://speakerdeck.com/ksatirli/iterative-infrastructure)
 Code: [github.com/ksatirli/iterative-infrastructure](https://github.com/ksatirli/iterative-infrastructure)
 
 ## Requirements

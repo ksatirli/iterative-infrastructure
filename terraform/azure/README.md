@@ -36,4 +36,4 @@ terraform apply
 
 Once complete, inspect the Packer workflow directory at `../../packer/` and look for a file called `terraform_data.auto.pkrvars.hcl`.
 
-This file will contain
+This file will contain information Packer can use to create images in the applicable Resource Group and Location.
