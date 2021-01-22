@@ -7,7 +7,7 @@
 - [Iterative Infrastructure](#iterative-infrastructure)
   - [Table of Contents](#table-of-contents)
   - [Requirements](#requirements)
-  - [Examples](#examples)
+  - [Workflows](#workflows)
   - [Author Information](#author-information)
   - [License](#license)
 
@@ -21,9 +21,9 @@ To use the code in this repository, you will need the following applications:
 
 Additionally, you will need a GitHub [Personal Access Token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token).
 
-## Examples
+## Workflows
 
-The code in this repository is split out into a handful of distinct flows:
+The code in this repository is split out into a handful of distinct flows, each in their own directory:
 
 * `terraform/azure` contains code for Terraform to set up an Azure Resource Group and generate a Packer variables definition file
 * `packer` contains code for Packer to build a (very!) basic image for an Azure Linux Virtual Machine
