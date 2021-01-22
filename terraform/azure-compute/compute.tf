@@ -17,7 +17,7 @@ resource "azurerm_linux_virtual_machine" "main" {
   admin_username = "adminuser"
 
   admin_ssh_key {
-    username   = "adminuser"
+    username = "adminuser"
     # This uses YOUR local public key and therefore requires YOUR private key for SSH
     public_key = file("~/.ssh/id_rsa.pub")
   }
@@ -40,6 +40,6 @@ output "vm_public_ip" {
 }
 
 output "ssh_connection_string" {
-  value       = "ssh ${azurerm_linux_virtual_machine.main.admin_username}@${local.vm_public_ip}"
+  value       = "ssh ${azure_linux_virtual_machine.main.admin_username}@${local.vm_public_ip}"
   description = "SSH connection string"
 }
