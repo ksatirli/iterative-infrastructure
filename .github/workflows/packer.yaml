@@ -23,15 +23,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Use latest Packer
-        uses: hashicorp-contrib/setup-packer@v1
+      - name: Format Packer files
+        uses: operatehappy/packer-github-actions@master
         with:
-          packer-version: 1.6.6
-
-      - name: Verify the Packer build files
-        if: github.event_name == 'pull_request'
-        run: packer validate .
-
-      - name: Build Packer image
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: packer build .
+          command: fmt
+          target: .      
+          
+      - name: Validate Packer files
+        uses: operatehappy/packer-github-actions@master
+        with:
+          command: validate
+          arguments: -syntax-only
+          target: .
