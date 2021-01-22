@@ -13,7 +13,7 @@ source "azure-arm" "main" {
   # client_secret   = var.client_secret
 
   # base image
-  image_publisher = var.image_published
+  image_publisher = var.image_publisher
   image_offer     = var.image_offer
   image_sku       = var.image_sku
 
